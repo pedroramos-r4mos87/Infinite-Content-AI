@@ -1,5 +1,9 @@
 using InfiniteContentAI.Api.Authentication;
 using InfiniteContentAI.Application.Identity;
+using InfiniteContentAI.Application.Projects.CreateProject;
+using InfiniteContentAI.Application.Projects.GetProject;
+using InfiniteContentAI.Application.Projects.ListProjects;
+using InfiniteContentAI.Data;
 using InfiniteContentAI.SharedKernel.Time;
 using Microsoft.AspNetCore.Authentication;
 
@@ -9,9 +13,11 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApiServices(
         this IServiceCollection services,
+        IConfiguration configuration,
         IHostEnvironment environment)
     {
         ArgumentNullException.ThrowIfNull(services);
+        ArgumentNullException.ThrowIfNull(configuration);
         ArgumentNullException.ThrowIfNull(environment);
 
         if (!environment.IsDevelopment() &&
@@ -25,6 +31,15 @@ public static class DependencyInjection
         services.AddScoped<ICurrentOrganization, HttpCurrentOrganization>();
         services.AddScoped<ICurrentUser, HttpCurrentUser>();
         services.AddSingleton<IClock, global::InfiniteContentAI.Infrastructure.Time.SystemClock>();
+        services.AddScoped<CreateProjectHandler>();
+        services.AddScoped<GetProjectHandler>();
+        services.AddScoped<ListProjectsHandler>();
+        services.AddData(
+            configuration.GetConnectionString("Database")
+            ?? throw new InvalidOperationException(
+                "The Database connection string is required."));
+        services.AddProblemDetails();
+        services.AddOpenApi();
 
         services
             .AddAuthentication(FakeAuthenticationDefaults.Scheme)
