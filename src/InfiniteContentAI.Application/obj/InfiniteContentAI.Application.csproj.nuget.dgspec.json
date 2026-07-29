@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj": {}
+    "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj": {
+    "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj",
         "projectName": "InfiniteContentAI.Application",
-        "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj",
+        "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\InfiniteContentAI.Application.csproj",
         "packagesPath": "C:\\Users\\phorr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\obj\\",
+        "outputPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj": {
-                "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj"
+              "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj": {
+                "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj"
               },
-              "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj": {
-                "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj"
+              "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj": {
+                "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj"
               },
-              "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj"
+              "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj"
               }
             }
           }
@@ -354,14 +354,14 @@
         }
       }
     },
-    "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj": {
+    "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj",
         "projectName": "InfiniteContentAI.Contracts",
-        "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj",
+        "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\InfiniteContentAI.Contracts.csproj",
         "packagesPath": "C:\\Users\\phorr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -694,14 +694,14 @@
         }
       }
     },
-    "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj": {
+    "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj",
         "projectName": "InfiniteContentAI.Domain",
-        "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj",
+        "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\InfiniteContentAI.Domain.csproj",
         "packagesPath": "C:\\Users\\phorr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -722,8 +722,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj"
+              "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj"
               }
             }
           }
@@ -1038,14 +1038,14 @@
         }
       }
     },
-    "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj": {
+    "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj",
         "projectName": "InfiniteContentAI.SharedKernel",
-        "projectPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\InfiniteContentAI.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\phorr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phorr\\.codex\\worktrees\\61a4\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\phorr\\Documents\\Obsidian\\Infinite-Content-AI\\src\\InfiniteContentAI.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
