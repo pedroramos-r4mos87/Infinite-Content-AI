@@ -1,0 +1,11 @@
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\bin\Debug\net10.0\InfiniteContentAI.SharedKernel.deps.json
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\bin\Debug\net10.0\InfiniteContentAI.SharedKernel.dll
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\bin\Debug\net10.0\InfiniteContentAI.SharedKernel.pdb
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\InfiniteContentAI.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\InfiniteContentAI.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\InfiniteContentAI.SharedKernel.AssemblyInfo.cs
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\InfiniteContentAI.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\InfiniteContentAI.SharedKernel.dll
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\refint\InfiniteContentAI.SharedKernel.dll
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\InfiniteContentAI.SharedKernel.pdb
+C:\Users\phorr\Documents\Obsidian\Infinite-Content-AI\src\InfiniteContentAI.SharedKernel\obj\Debug\net10.0\ref\InfiniteContentAI.SharedKernel.dll

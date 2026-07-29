@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\InfiniteContentAI.SharedKernel\InfiniteContentAI.SharedKernel.csproj" />
+  </ItemGroup>
+</Project>

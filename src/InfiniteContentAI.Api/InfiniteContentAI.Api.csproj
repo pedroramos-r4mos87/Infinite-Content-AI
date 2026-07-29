@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\InfiniteContentAI.Application\InfiniteContentAI.Application.csproj" />
+    <ProjectReference Include="..\InfiniteContentAI.Contracts\InfiniteContentAI.Contracts.csproj" />
+    <ProjectReference Include="..\InfiniteContentAI.SharedKernel\InfiniteContentAI.SharedKernel.csproj" />
+    <ProjectReference Include="..\InfiniteContentAI.Data\InfiniteContentAI.Data.csproj" />
+    <ProjectReference Include="..\InfiniteContentAI.Infrastructure\InfiniteContentAI.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
