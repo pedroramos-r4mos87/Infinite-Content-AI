@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InfiniteContentAI.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fc0433120c09210fec010354caf8a95c755f68d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76e16a21957fdb3999b9a760ad90b13d899f16cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("InfiniteContentAI.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InfiniteContentAI.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

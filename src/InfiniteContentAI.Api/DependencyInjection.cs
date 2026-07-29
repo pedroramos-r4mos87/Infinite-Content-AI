@@ -23,6 +23,7 @@ public static class DependencyInjection
 
         services.AddHttpContextAccessor();
         services.AddScoped<ICurrentOrganization, HttpCurrentOrganization>();
+        services.AddScoped<ICurrentUser, HttpCurrentUser>();
         services.AddSingleton<IClock, global::InfiniteContentAI.Infrastructure.Time.SystemClock>();
 
         services
