@@ -90,6 +90,8 @@ public sealed class FakeAuthenticationTests
                 EnvironmentName = environmentName,
             });
         builder.WebHost.UseTestServer();
+        builder.Configuration["ConnectionStrings:Database"] =
+            "Host=localhost;Database=test;Username=test;Password=test";
         builder.Services.AddApiServices(
             builder.Configuration,
             builder.Environment);
