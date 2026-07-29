@@ -200,7 +200,7 @@ Esses itens deverão permanecer no Backlog.
 
 ---
 
-## US-003 — Criar testes de arquitetura
+## US-003 — Criar testes de arquitetura - Done
 
 **Prioridade:** P1
 
@@ -233,7 +233,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-010 — Implementar Result Pattern
+## US-010 — Implementar Result Pattern - Done
 
 **Prioridade:** P0
 
@@ -269,7 +269,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-011 — Implementar primitivas de Domain
+## US-011 — Implementar primitivas de Domain - Done
 
 **Prioridade:** P0
 
@@ -303,7 +303,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-012 — Implementar abstração de tempo
+## US-012 — Implementar abstração de tempo - Done
 
 **Prioridade:** P0
 
@@ -327,7 +327,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-013 — Implementar paginação
+## US-013 — Implementar paginação - Done
 
 **Prioridade:** P1
 

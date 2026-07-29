@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AGENTS.md",
+                "file": "02-Planejamento/Sprints/Sprint 00 - Fundação e Primeiro Vertical Slice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "Sprint 00 - Fundação e Primeiro Vertical Slice"
             }
           }
         ],
@@ -256,17 +256,19 @@
   },
   "active": "d4a872d2e22bc5bb",
   "lastOpenFiles": [
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/InfiniteContentAI.SharedKernel.UnitTests.dll",
-    "tests/InfiniteContentAI.ArchitectureTests/bin/Debug/net10.0/InfiniteContentAI.ArchitectureTests.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/zh-Hans",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
-    "tests/InfiniteContentAI.SharedKernel.UnitTests/bin/Debug/net10.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/InfiniteContentAI.Api.IntegrationTests.pdb",
+    "tests/InfiniteContentAI.Api.IntegrationTests/obj/Debug/net10.0/ref/InfiniteContentAI.Api.IntegrationTests.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/InfiniteContentAI.Api.IntegrationTests.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hant",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+    "tests/InfiniteContentAI.Api.IntegrationTests/bin/Debug/net10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+    "14-Diário/Daily Log.md",
+    "AGENTS.md",
     "06-Agentes/Analytics Agent.md",
     "03-Arquitetura/Estrutura da Solution.md",
     "02-Planejamento/Sprint Atual.md",
@@ -289,8 +291,6 @@
     "03-Arquitetura/Arquitetura dos Agentes.md",
     "03-Arquitetura/Arquitetura dos Pipelines.md",
     "03-Arquitetura/Arquitetura do n8n.md",
-    "03-Arquitetura/Arquitetura de Configuração.md",
-    "02-Planejamento/Roadmap.md",
-    "01-Produto/Visão do Produto.md"
+    "03-Arquitetura/Arquitetura de Configuração.md"
   ]
 }

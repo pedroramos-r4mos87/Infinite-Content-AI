@@ -72,6 +72,18 @@ public sealed class ProjectDependencyTests
             GetInternalReferences(Infrastructure));
     }
 
+    [Theory]
+    [InlineData(Application)]
+    [InlineData(Domain)]
+    public void InnerLayersDoNotReferenceAspNetCore(string assemblyName)
+    {
+        Assert.DoesNotContain(
+            Assembly.Load(assemblyName).GetReferencedAssemblies(),
+            reference => reference.Name?.StartsWith(
+                "Microsoft.AspNetCore",
+                StringComparison.Ordinal) == true);
+    }
+
     [Fact]
     public void ProductionProjectsDoNotContainCircularReferences()
     {
