@@ -86,6 +86,23 @@ public sealed class ProjectEndpointTests(
     }
 
     [Fact]
+    public async Task CreateWithLongDescriptionReturnsValidationProblemWithoutPersisting()
+    {
+        int countBefore = await CountProjectsAsync();
+
+        using HttpResponseMessage response = await fixture.Client.PostAsJsonAsync(
+            "/api/v1/projects",
+            new
+            {
+                name = "Projeto inválido",
+                description = new string('a', Project.MaximumDescriptionLength + 1),
+            });
+
+        await AssertValidationProblemAsync(response, "Project.DescriptionTooLong");
+        Assert.Equal(countBefore, await CountProjectsAsync());
+    }
+
+    [Fact]
     public async Task GetMissingAndCrossTenantProjectsReturnSameNotFoundProblem()
     {
         Project otherTenant = Project.Create(
@@ -159,6 +176,14 @@ public sealed class ProjectEndpointTests(
             null,
             "integration-test",
             new StubClock(createdAt)).Value;
+    }
+
+    private async Task<int> CountProjectsAsync()
+    {
+        await using AsyncServiceScope scope = fixture.Services.CreateAsyncScope();
+        var dbContext =
+            scope.ServiceProvider.GetRequiredService<InfiniteContentAI.Data.ApplicationDbContext>();
+        return await dbContext.Projects.CountAsync(CancellationToken.None);
     }
 
     private static async Task AssertValidationProblemAsync(

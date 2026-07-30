@@ -20,6 +20,14 @@ public static class ProjectErrors
         "Project.CreatedByRequired",
         "O autor da criação do projeto é obrigatório.");
 
+    public static readonly Error DescriptionTooLong = Error.Validation(
+        "Project.DescriptionTooLong",
+        $"A descrição do projeto deve possuir no máximo {Project.MaximumDescriptionLength} caracteres.");
+
+    public static readonly Error CreatedByTooLong = Error.Validation(
+        "Project.CreatedByTooLong",
+        $"O autor da criação do projeto deve possuir no máximo {Project.MaximumCreatedByLength} caracteres.");
+
     public static readonly Error NotFound = Error.NotFound(
         "Project.NotFound",
         "O projeto informado não foi encontrado.");

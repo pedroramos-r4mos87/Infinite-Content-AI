@@ -84,6 +84,80 @@ public sealed class ProjectTests
         Assert.Equal(ProjectErrors.OrganizationRequired, result.Error);
     }
 
+    [Fact]
+    public void CreateAcceptsDescriptionAtMaximumLength()
+    {
+        string description = new('a', Project.MaximumDescriptionLength);
+
+        var result = Project.Create(
+            OrganizationId,
+            "Projeto",
+            description,
+            "user-123",
+            new StubClock(Now));
+
+        Assert.True(result.IsSuccess);
+        Assert.Equal(description, result.Value.Description);
+    }
+
+    [Fact]
+    public void CreateRejectsDescriptionAboveMaximumLength()
+    {
+        var result = Project.Create(
+            OrganizationId,
+            "Projeto",
+            new string('a', Project.MaximumDescriptionLength + 1),
+            "user-123",
+            new StubClock(Now));
+
+        Assert.True(result.IsFailure);
+        Assert.Equal(ProjectErrors.DescriptionTooLong, result.Error);
+    }
+
+    [Fact]
+    public void CreateNormalizesWhitespaceDescriptionToNull()
+    {
+        var result = Project.Create(
+            OrganizationId,
+            "Projeto",
+            "   ",
+            "user-123",
+            new StubClock(Now));
+
+        Assert.True(result.IsSuccess);
+        Assert.Null(result.Value.Description);
+    }
+
+    [Fact]
+    public void CreateAcceptsCreatedByAtMaximumLength()
+    {
+        string createdBy = new('a', Project.MaximumCreatedByLength);
+
+        var result = Project.Create(
+            OrganizationId,
+            "Projeto",
+            null,
+            createdBy,
+            new StubClock(Now));
+
+        Assert.True(result.IsSuccess);
+        Assert.Equal(createdBy, result.Value.CreatedBy);
+    }
+
+    [Fact]
+    public void CreateRejectsCreatedByAboveMaximumLength()
+    {
+        var result = Project.Create(
+            OrganizationId,
+            "Projeto",
+            null,
+            new string('a', Project.MaximumCreatedByLength + 1),
+            new StubClock(Now));
+
+        Assert.True(result.IsFailure);
+        Assert.Equal(ProjectErrors.CreatedByTooLong, result.Error);
+    }
+
     private sealed class StubClock(DateTimeOffset utcNow) : IClock
     {
         public DateTimeOffset UtcNow { get; } = utcNow;

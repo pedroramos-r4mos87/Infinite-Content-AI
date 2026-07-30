@@ -7,6 +7,9 @@ namespace InfiniteContentAI.Domain.Projects;
 
 public sealed class Project : AggregateRoot<ProjectId>
 {
+    public const int MaximumDescriptionLength = 2000;
+    public const int MaximumCreatedByLength = 200;
+
     private Project(
         ProjectId id,
         OrganizationId organizationId,
@@ -63,6 +66,19 @@ public sealed class Project : AggregateRoot<ProjectId>
             return Result.Failure<Project>(ProjectErrors.CreatedByRequired);
         }
 
+        string normalizedCreatedBy = createdBy.Trim();
+        if (normalizedCreatedBy.Length > MaximumCreatedByLength)
+        {
+            return Result.Failure<Project>(ProjectErrors.CreatedByTooLong);
+        }
+
+        string? normalizedDescription =
+            string.IsNullOrWhiteSpace(description) ? null : description.Trim();
+        if (normalizedDescription?.Length > MaximumDescriptionLength)
+        {
+            return Result.Failure<Project>(ProjectErrors.DescriptionTooLong);
+        }
+
         Result<ProjectName> projectName = ProjectName.Create(name);
         if (projectName.IsFailure)
         {
@@ -73,10 +89,10 @@ public sealed class Project : AggregateRoot<ProjectId>
             ProjectId.New(),
             organizationId,
             projectName.Value,
-            string.IsNullOrWhiteSpace(description) ? null : description.Trim(),
+            normalizedDescription,
             ProjectStatus.Active,
             clock.UtcNow,
-            createdBy.Trim());
+            normalizedCreatedBy);
 
         project.RaiseDomainEvent(
             new ProjectCreatedDomainEvent(

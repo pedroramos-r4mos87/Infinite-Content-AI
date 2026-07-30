@@ -24,7 +24,7 @@ internal sealed class ProjectConfiguration : IEntityTypeConfiguration<Project>
             .HasConversion(name => name.Value, value => ProjectName.Create(value).Value);
         builder.Property(project => project.Description)
             .HasColumnName("description")
-            .HasMaxLength(2000);
+            .HasMaxLength(Project.MaximumDescriptionLength);
         builder.Property(project => project.Status)
             .HasColumnName("status")
             .HasConversion<string>()
@@ -34,7 +34,7 @@ internal sealed class ProjectConfiguration : IEntityTypeConfiguration<Project>
             .HasColumnType("timestamp with time zone");
         builder.Property(project => project.CreatedBy)
             .HasColumnName("created_by")
-            .HasMaxLength(200);
+            .HasMaxLength(Project.MaximumCreatedByLength);
 
         builder.HasIndex(project => new { project.OrganizationId, project.CreatedAt, project.Id })
             .HasDatabaseName("ix_projects_organization_created_at_id");
