@@ -71,7 +71,9 @@ public sealed class FakeAuthenticationTests
 
         InvalidOperationException exception =
             Assert.Throws<InvalidOperationException>(
-                () => builder.Services.AddApiServices(builder.Environment));
+                () => builder.Services.AddApiServices(
+                    builder.Configuration,
+                    builder.Environment));
 
         Assert.Contains(
             "outside Development and Test",
@@ -88,7 +90,11 @@ public sealed class FakeAuthenticationTests
                 EnvironmentName = environmentName,
             });
         builder.WebHost.UseTestServer();
-        builder.Services.AddApiServices(builder.Environment);
+        builder.Configuration["ConnectionStrings:Database"] =
+            "Host=localhost;Database=test;Username=test;Password=test";
+        builder.Services.AddApiServices(
+            builder.Configuration,
+            builder.Environment);
 
         WebApplication application = builder.Build();
         application.UseAuthentication();

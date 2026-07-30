@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\InfiniteContentAI.Application\InfiniteContentAI.Application.csproj" />
     <ProjectReference Include="..\InfiniteContentAI.Domain\InfiniteContentAI.Domain.csproj" />
     <ProjectReference Include="..\InfiniteContentAI.SharedKernel\InfiniteContentAI.SharedKernel.csproj" />

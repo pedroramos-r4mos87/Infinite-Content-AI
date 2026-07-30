@@ -3,8 +3,8 @@
 ## 1. Identificação
 
 ```text
-Sprint: Sprint 01 — Fundação e Primeiro Vertical Slice
-Status: Planejada
+Sprint: Sprint 00 — Fundação e Primeiro Vertical Slice
+Status: Concluída
 Marco: M1 — MVP Funcional
 Prioridade: P0
 ```
@@ -116,7 +116,7 @@ Esses itens deverão permanecer no Backlog.
 
 # 5. Histórias Selecionadas
 
-## US-001 — Criar a solution
+## US-001 — Criar a solution - Done
 
 **Prioridade:** P0
 
@@ -164,7 +164,7 @@ Esses itens deverão permanecer no Backlog.
 
 ---
 
-## US-002 — Configurar padrões globais
+## US-002 — Configurar padrões globais - Done
 
 **Prioridade:** P0
 
@@ -349,7 +349,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-020 — Criar contexto de Organization
+## US-020 — Criar contexto de Organization - Done
 
 **Prioridade:** P0
 
@@ -381,7 +381,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-021 — Criar autenticação fake de desenvolvimento
+## US-021 — Criar autenticação fake de desenvolvimento - Done
 
 **Prioridade:** P0
 
@@ -411,7 +411,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-030 — Criar Project
+## US-030 — Criar Project - Done
 
 **Prioridade:** P0
 
@@ -517,7 +517,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-031 — Consultar Project
+## US-031 — Consultar Project - Done
 
 **Prioridade:** P0
 
@@ -551,7 +551,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-032 — Listar Projects
+## US-032 — Listar Projects - Done
 
 **Prioridade:** P1
 
@@ -583,7 +583,7 @@ SharedKernel → qualquer projeto interno
 
 ---
 
-## US-190 — Criar Docker Compose com PostgreSQL
+## US-190 — Criar Docker Compose com PostgreSQL - Done
 
 **Prioridade:** P0
 
@@ -1104,33 +1104,33 @@ A demonstração deverá seguir:
 
 A Sprint estará concluída quando:
 
--  A solution compilar sem warnings.
+- [x] A solution compilar sem warnings.
     
--  Testes de arquitetura passarem.
+- [x] Testes de arquitetura passarem.
     
--  Shared Kernel estiver implementado.
+- [x] Shared Kernel estiver implementado.
     
--  Project Domain Model estiver testado.
+- [x] Project Domain Model estiver testado.
     
--  PostgreSQL estiver configurado localmente.
+- [x] PostgreSQL estiver configurado localmente.
     
--  Migration inicial estiver criada.
+- [x] Migration inicial estiver criada.
     
--  Project puder ser criado.
+- [x] Project puder ser criado.
     
--  Project puder ser consultado.
+- [x] Project puder ser consultado.
     
--  Projects puderem ser listados.
+- [x] Projects puderem ser listados.
     
--  OrganizationId for respeitado.
+- [x] OrganizationId for respeitado.
     
--  Problem Details estiver configurado.
+- [x] Problem Details estiver configurado.
     
--  Testes de integração passarem.
+- [x] Testes de integração passarem.
     
--  O fluxo puder ser demonstrado pelo Swagger ou cliente HTTP.
+- [x] O fluxo puder ser demonstrado pelo Swagger ou cliente HTTP.
     
--  Nenhuma feature futura tiver sido adicionada.
+- [x] Nenhuma feature futura tiver sido adicionada.
     
 
 ---

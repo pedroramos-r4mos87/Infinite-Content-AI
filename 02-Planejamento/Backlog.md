@@ -515,7 +515,7 @@ SharedKernel
 
 # 10. EPIC-03 — Projects
 
-## US-030 — Criar Project
+## US-030 — Criar Project - Done
 
 **Como criador de conteúdo**, quero criar um Project, para organizar conteúdos de um canal ou cliente.
 
@@ -590,7 +590,7 @@ SharedKernel
 
 ---
 
-## US-031 — Consultar Project
+## US-031 — Consultar Project - Done
 
 **Como usuário**, quero consultar um Project, para visualizar seu contexto.
 
@@ -607,7 +607,7 @@ SharedKernel
 
 ---
 
-## US-032 — Listar Projects
+## US-032 — Listar Projects - Done
 
 **Como usuário**, quero listar meus Projects, para selecionar onde trabalhar.
 
@@ -1689,7 +1689,7 @@ Artifacts = 2
 
 # 26. EPIC-19 — Ambiente Local e CI
 
-## US-190 — Criar Docker Compose
+## US-190 — Criar Docker Compose - Done
 
 Serviços:
 

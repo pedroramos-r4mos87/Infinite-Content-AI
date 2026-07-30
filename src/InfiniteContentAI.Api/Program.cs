@@ -1,13 +1,18 @@
 using InfiniteContentAI.Api;
+using InfiniteContentAI.Api.Projects;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddApiServices(builder.Environment);
+builder.Services.AddApiServices(builder.Configuration, builder.Environment);
 
 var app = builder.Build();
 
+app.UseExceptionHandler();
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapOpenApi();
+app.MapProjectEndpoints();
 
 app.Run();
 
