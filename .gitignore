@@ -2,3 +2,4 @@
 **/obj/
 .env
 .tools/
+.obsidian/workspace.json

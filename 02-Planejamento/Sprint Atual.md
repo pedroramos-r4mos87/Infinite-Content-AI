@@ -2,7 +2,7 @@
 
 Sprint ativa:
 
-[[Sprint 00 - Fundação e Primeiro Vertical Slice]]
+[[Sprint 01 - Pipelines e Versionamento]]
 
 Status: Planejada  
 Marco: M1 — MVP Funcional
