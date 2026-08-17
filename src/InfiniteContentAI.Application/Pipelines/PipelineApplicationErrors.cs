@@ -19,4 +19,8 @@ public static class PipelineApplicationErrors
     public static readonly Error StepTypeInvalid = Error.Validation(
         "Pipeline.StepTypeInvalid",
         "O tipo da etapa deve ser research ou script.");
+
+    public static readonly Error InvalidPagination = Error.Validation(
+        "Pipeline.InvalidPagination",
+        "Page deve ser maior que zero e pageSize deve estar entre 1 e 100.");
 }

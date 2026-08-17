@@ -112,6 +112,60 @@ internal sealed class PipelineRepositorySpy : IPipelineRepository
     }
 }
 
+internal sealed class PipelineQueriesStub : IPipelineQueries
+{
+    public PipelineDetails? Pipeline { get; init; }
+
+    public PaginatedResult<PipelineListItem> Page { get; init; } =
+        new([], 1, 20, 0);
+
+    public int GetCallCount { get; private set; }
+
+    public int ListCallCount { get; private set; }
+
+    public OrganizationId RequestedOrganizationId { get; private set; }
+
+    public PipelineId RequestedPipelineId { get; private set; }
+
+    public ProjectId RequestedProjectId { get; private set; }
+
+    public int RequestedPage { get; private set; }
+
+    public int RequestedPageSize { get; private set; }
+
+    public CancellationToken GetCancellationToken { get; private set; }
+
+    public CancellationToken ListCancellationToken { get; private set; }
+
+    public Task<PipelineDetails?> GetAsync(
+        OrganizationId organizationId,
+        PipelineId pipelineId,
+        CancellationToken cancellationToken)
+    {
+        GetCallCount++;
+        RequestedOrganizationId = organizationId;
+        RequestedPipelineId = pipelineId;
+        GetCancellationToken = cancellationToken;
+        return Task.FromResult(Pipeline);
+    }
+
+    public Task<PaginatedResult<PipelineListItem>> ListByProjectAsync(
+        OrganizationId organizationId,
+        ProjectId projectId,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken)
+    {
+        ListCallCount++;
+        RequestedOrganizationId = organizationId;
+        RequestedProjectId = projectId;
+        RequestedPage = page;
+        RequestedPageSize = pageSize;
+        ListCancellationToken = cancellationToken;
+        return Task.FromResult(Page);
+    }
+}
+
 internal sealed class UnitOfWorkSpy : IUnitOfWork
 {
     public int CallCount { get; private set; }
