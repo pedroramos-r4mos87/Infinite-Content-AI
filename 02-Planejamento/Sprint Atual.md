@@ -2,7 +2,9 @@
 
 Sprint ativa:
 
-[[Sprint 01 - Pipelines e Versionamento]]
+**# Sprint Atual
+
+[[Sprints/Sprint 02 - Execução de Pipeline e Artifacts]]
 
 Status: Planejada  
 Marco: M1 — MVP Funcional
