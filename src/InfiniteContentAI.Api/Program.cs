@@ -1,4 +1,5 @@
 using InfiniteContentAI.Api;
+using InfiniteContentAI.Api.Pipelines;
 using InfiniteContentAI.Api.Projects;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ app.UseAuthorization();
 
 app.MapOpenApi();
 app.MapProjectEndpoints();
+app.MapPipelineEndpoints();
 
 app.Run();
 

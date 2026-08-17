@@ -1,4 +1,5 @@
 using InfiniteContentAI.Api;
+using InfiniteContentAI.Api.Pipelines;
 using InfiniteContentAI.Api.Projects;
 using InfiniteContentAI.Data;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +14,9 @@ namespace InfiniteContentAI.Api.IntegrationTests.Projects;
 
 public sealed class ProjectApiFixture : IAsyncLifetime
 {
+    private const string ServerConnectionString =
+        "Host=127.0.0.1;Port=5432;Database=postgres;Username=postgres;Password=postgres;SSL Mode=Disable";
+
     private readonly string _databaseName =
         $"infinite_content_ai_api_tests_{Guid.NewGuid():N}";
 
@@ -29,8 +33,27 @@ public sealed class ProjectApiFixture : IAsyncLifetime
         _application?.Services
         ?? throw new InvalidOperationException("The fixture has not been initialized.");
 
+    public HttpClient CreateClient(
+        Guid organizationId,
+        Guid? userId = null)
+    {
+        HttpClient client = _application?.GetTestClient()
+            ?? throw new InvalidOperationException("The fixture has not been initialized.");
+        client.DefaultRequestHeaders.Add(
+            "X-Test-Organization-Id",
+            organizationId.ToString());
+        if (userId.HasValue)
+        {
+            client.DefaultRequestHeaders.Add(
+                "X-Test-User-Id",
+                userId.Value.ToString());
+        }
+
+        return client;
+    }
+
     private string ConnectionString =>
-        $"Host=localhost;Port=5432;Database={_databaseName};Username=postgres;Password=postgres";
+        $"Host=127.0.0.1;Port=5432;Database={_databaseName};Username=postgres;Password=postgres;SSL Mode=Disable";
 
     public async Task InitializeAsync()
     {
@@ -47,7 +70,9 @@ public sealed class ProjectApiFixture : IAsyncLifetime
         _application.UseExceptionHandler();
         _application.UseAuthentication();
         _application.UseAuthorization();
+        _application.MapOpenApi();
         _application.MapProjectEndpoints();
+        _application.MapPipelineEndpoints();
 
         await using (AsyncServiceScope scope = _application.Services.CreateAsyncScope())
         {
@@ -66,8 +91,7 @@ public sealed class ProjectApiFixture : IAsyncLifetime
             await _application.DisposeAsync();
         }
 
-        await using var connection = new NpgsqlConnection(
-            "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres");
+        await using var connection = new NpgsqlConnection(ServerConnectionString);
         await connection.OpenAsync();
         await using NpgsqlCommand command = connection.CreateCommand();
         command.CommandText =
@@ -80,8 +104,7 @@ public sealed class ProjectApiFixture : IAsyncLifetime
 
     private async Task CreateDatabaseAsync()
     {
-        await using var connection = new NpgsqlConnection(
-            "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres");
+        await using var connection = new NpgsqlConnection(ServerConnectionString);
         await connection.OpenAsync();
         await using NpgsqlCommand command = connection.CreateCommand();
         command.CommandText = $"CREATE DATABASE \"{_databaseName}\"";

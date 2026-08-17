@@ -1,5 +1,7 @@
 using InfiniteContentAI.Application.Abstractions.Data;
+using InfiniteContentAI.Application.Pipelines;
 using InfiniteContentAI.Application.Projects;
+using InfiniteContentAI.Data.Pipelines;
 using InfiniteContentAI.Data.Projects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,8 @@ public static class DependencyInjection
             options => options.UseNpgsql(connectionString));
         services.AddScoped<IProjectRepository, ProjectRepository>();
         services.AddScoped<IProjectQueries, ProjectQueries>();
+        services.AddScoped<IPipelineRepository, PipelineRepository>();
+        services.AddScoped<IPipelineQueries, PipelineQueries>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         return services;
     }

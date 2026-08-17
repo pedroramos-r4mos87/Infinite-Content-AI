@@ -7,6 +7,9 @@ namespace InfiniteContentAI.Data.IntegrationTests;
 
 public sealed class PostgresDatabaseFixture : IAsyncLifetime
 {
+    private const string ServerConnectionString =
+        "Host=127.0.0.1;Port=5432;Database=postgres;Username=postgres;Password=postgres;SSL Mode=Disable";
+
     private readonly string _databaseName =
         $"infinite_content_ai_data_tests_{Guid.NewGuid():N}";
 
@@ -17,12 +20,11 @@ public sealed class PostgresDatabaseFixture : IAsyncLifetime
         ?? throw new InvalidOperationException("The fixture has not been initialized.");
 
     public string ConnectionString =>
-        $"Host=localhost;Port=5432;Database={_databaseName};Username=postgres;Password=postgres";
+        $"Host=127.0.0.1;Port=5432;Database={_databaseName};Username=postgres;Password=postgres;SSL Mode=Disable";
 
     public async Task InitializeAsync()
     {
-        await using (var connection = new NpgsqlConnection(
-                         "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres"))
+        await using (var connection = new NpgsqlConnection(ServerConnectionString))
         {
             await connection.OpenAsync();
             await using NpgsqlCommand command = connection.CreateCommand();
@@ -47,8 +49,7 @@ public sealed class PostgresDatabaseFixture : IAsyncLifetime
             await _serviceProvider.DisposeAsync();
         }
 
-        await using var connection = new NpgsqlConnection(
-            "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres");
+        await using var connection = new NpgsqlConnection(ServerConnectionString);
         await connection.OpenAsync();
         await using NpgsqlCommand command = connection.CreateCommand();
         command.CommandText =
