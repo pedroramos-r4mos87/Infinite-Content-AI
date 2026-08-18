@@ -9,7 +9,7 @@ using InfiniteContentAI.Application.Projects.CreateProject;
 using InfiniteContentAI.Application.Projects.GetProject;
 using InfiniteContentAI.Application.Projects.ListProjects;
 using InfiniteContentAI.Data;
-using InfiniteContentAI.SharedKernel.Time;
+using InfiniteContentAI.Infrastructure;
 using Microsoft.AspNetCore.Authentication;
 
 namespace InfiniteContentAI.Api;
@@ -35,7 +35,7 @@ public static class DependencyInjection
         services.AddHttpContextAccessor();
         services.AddScoped<ICurrentOrganization, HttpCurrentOrganization>();
         services.AddScoped<ICurrentUser, HttpCurrentUser>();
-        services.AddSingleton<IClock, global::InfiniteContentAI.Infrastructure.Time.SystemClock>();
+        services.AddInfrastructure();
         services.AddScoped<CreateProjectHandler>();
         services.AddScoped<GetProjectHandler>();
         services.AddScoped<ListProjectsHandler>();
