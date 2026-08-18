@@ -15,5 +15,6 @@
     <ProjectReference Include="..\..\src\InfiniteContentAI.Application\InfiniteContentAI.Application.csproj" />
     <ProjectReference Include="..\..\src\InfiniteContentAI.Data\InfiniteContentAI.Data.csproj" />
     <ProjectReference Include="..\..\src\InfiniteContentAI.Domain\InfiniteContentAI.Domain.csproj" />
+    <ProjectReference Include="..\..\src\InfiniteContentAI.Infrastructure\InfiniteContentAI.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
