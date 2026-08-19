@@ -1,4 +1,6 @@
 using InfiniteContentAI.Api.Authentication;
+using InfiniteContentAI.Application.Executions.ExecutePipeline;
+using InfiniteContentAI.Application.Executions.GetPipelineExecution;
 using InfiniteContentAI.Application.Identity;
 using InfiniteContentAI.Application.Pipelines.AddPipelineStep;
 using InfiniteContentAI.Application.Pipelines.CreatePipeline;
@@ -44,6 +46,8 @@ public static class DependencyInjection
         services.AddScoped<PublishPipelineHandler>();
         services.AddScoped<GetPipelineHandler>();
         services.AddScoped<ListPipelinesHandler>();
+        services.AddScoped<ExecutePipelineHandler>();
+        services.AddScoped<GetPipelineExecutionHandler>();
         services.AddData(
             configuration.GetConnectionString("Database")
             ?? throw new InvalidOperationException(
