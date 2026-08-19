@@ -1,4 +1,5 @@
 using InfiniteContentAI.Api;
+using InfiniteContentAI.Api.Executions;
 using InfiniteContentAI.Api.Pipelines;
 using InfiniteContentAI.Api.Projects;
 
@@ -15,6 +16,7 @@ app.UseAuthorization();
 app.MapOpenApi();
 app.MapProjectEndpoints();
 app.MapPipelineEndpoints();
+app.MapExecutionEndpoints();
 
 app.Run();
 

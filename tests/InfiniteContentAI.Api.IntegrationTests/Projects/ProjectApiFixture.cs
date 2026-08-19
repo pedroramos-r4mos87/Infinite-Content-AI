@@ -1,12 +1,15 @@
 using InfiniteContentAI.Api;
+using InfiniteContentAI.Api.Executions;
 using InfiniteContentAI.Api.Pipelines;
 using InfiniteContentAI.Api.Projects;
+using InfiniteContentAI.Application.ArtificialIntelligence;
 using InfiniteContentAI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Npgsql;
 
@@ -73,6 +76,7 @@ public sealed class ProjectApiFixture : IAsyncLifetime
         _application.MapOpenApi();
         _application.MapProjectEndpoints();
         _application.MapPipelineEndpoints();
+        _application.MapExecutionEndpoints();
 
         await using (AsyncServiceScope scope = _application.Services.CreateAsyncScope())
         {
@@ -82,6 +86,31 @@ public sealed class ProjectApiFixture : IAsyncLifetime
         }
 
         await _application.StartAsync();
+    }
+
+    public async Task<TestApiApplication> CreateApplicationAsync(
+        IAIProvider aiProvider)
+    {
+        WebApplicationBuilder builder = WebApplication.CreateBuilder(
+            new WebApplicationOptions { EnvironmentName = "Test" });
+        builder.Logging.ClearProviders();
+        builder.WebHost.UseTestServer();
+        builder.Configuration["ConnectionStrings:Database"] = ConnectionString;
+        builder.Services.AddApiServices(builder.Configuration, builder.Environment);
+        builder.Services.RemoveAll<IAIProvider>();
+        builder.Services.AddSingleton(aiProvider);
+
+        WebApplication application = builder.Build();
+        application.UseExceptionHandler();
+        application.UseAuthentication();
+        application.UseAuthorization();
+        application.MapOpenApi();
+        application.MapProjectEndpoints();
+        application.MapPipelineEndpoints();
+        application.MapExecutionEndpoints();
+        await application.StartAsync();
+
+        return new TestApiApplication(application);
     }
 
     public async Task DisposeAsync()
@@ -109,5 +138,17 @@ public sealed class ProjectApiFixture : IAsyncLifetime
         await using NpgsqlCommand command = connection.CreateCommand();
         command.CommandText = $"CREATE DATABASE \"{_databaseName}\"";
         await command.ExecuteNonQueryAsync();
+    }
+
+    public sealed class TestApiApplication(
+        WebApplication application) : IAsyncDisposable
+    {
+        public HttpClient Client { get; } = application.GetTestClient();
+
+        public async ValueTask DisposeAsync()
+        {
+            Client.Dispose();
+            await application.DisposeAsync();
+        }
     }
 }

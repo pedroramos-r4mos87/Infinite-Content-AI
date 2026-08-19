@@ -1,4 +1,6 @@
 using InfiniteContentAI.Api.Authentication;
+using InfiniteContentAI.Application.Executions.ExecutePipeline;
+using InfiniteContentAI.Application.Executions.GetPipelineExecution;
 using InfiniteContentAI.Application.Identity;
 using InfiniteContentAI.Application.Pipelines.AddPipelineStep;
 using InfiniteContentAI.Application.Pipelines.CreatePipeline;
@@ -9,7 +11,7 @@ using InfiniteContentAI.Application.Projects.CreateProject;
 using InfiniteContentAI.Application.Projects.GetProject;
 using InfiniteContentAI.Application.Projects.ListProjects;
 using InfiniteContentAI.Data;
-using InfiniteContentAI.SharedKernel.Time;
+using InfiniteContentAI.Infrastructure;
 using Microsoft.AspNetCore.Authentication;
 
 namespace InfiniteContentAI.Api;
@@ -35,7 +37,7 @@ public static class DependencyInjection
         services.AddHttpContextAccessor();
         services.AddScoped<ICurrentOrganization, HttpCurrentOrganization>();
         services.AddScoped<ICurrentUser, HttpCurrentUser>();
-        services.AddSingleton<IClock, global::InfiniteContentAI.Infrastructure.Time.SystemClock>();
+        services.AddInfrastructure();
         services.AddScoped<CreateProjectHandler>();
         services.AddScoped<GetProjectHandler>();
         services.AddScoped<ListProjectsHandler>();
@@ -44,6 +46,8 @@ public static class DependencyInjection
         services.AddScoped<PublishPipelineHandler>();
         services.AddScoped<GetPipelineHandler>();
         services.AddScoped<ListPipelinesHandler>();
+        services.AddScoped<ExecutePipelineHandler>();
+        services.AddScoped<GetPipelineExecutionHandler>();
         services.AddData(
             configuration.GetConnectionString("Database")
             ?? throw new InvalidOperationException(

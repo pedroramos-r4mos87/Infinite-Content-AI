@@ -1,3 +1,5 @@
+using InfiniteContentAI.Domain.Artifacts;
+using InfiniteContentAI.Domain.Executions;
 using InfiniteContentAI.Domain.Pipelines;
 using InfiniteContentAI.Domain.Projects;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,12 @@ public sealed class ApplicationDbContext(DbContextOptions<ApplicationDbContext> 
     public DbSet<Pipeline> Pipelines => Set<Pipeline>();
 
     public DbSet<PipelineStep> PipelineSteps => Set<PipelineStep>();
+
+    public DbSet<PipelineExecution> PipelineExecutions => Set<PipelineExecution>();
+
+    public DbSet<StepExecution> StepExecutions => Set<StepExecution>();
+
+    public DbSet<Artifact> Artifacts => Set<Artifact>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
